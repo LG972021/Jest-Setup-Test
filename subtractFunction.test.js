@@ -22,4 +22,12 @@ describe ('subtracting', () => {
         expect(typeof(actualOutput)).toEqual(typeof(expectedOutput))
     
         });
+
+    test ('Test if input is mutated', () => { 
+        let input = [10,5];
+        let inputAfterInvocation = [10,5];
+        subtracting(input[0],input[1]);
+        expect(input).toEqual(inputAfterInvocation)
+        
+        });
 });
